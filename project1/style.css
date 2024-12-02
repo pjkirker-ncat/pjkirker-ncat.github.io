@@ -1,0 +1,239 @@
+/* Body styling: Setting up a clean base with font, margin, padding, and background color */
+body {
+    font-family: Arial, sans-serif; /* I chose Arial for a modern, readable font across all devices */
+    margin: 0; /* Removing the default margin to give me full control of the layout */
+    padding: 0; /* Removing default padding to avoid any unexpected gaps */
+    background-color: #f4f4f4; /* A subtle light grey background to maintain a professional look */
+}
+/* Header styling: Aligns the logo on the left and the navigation on the right */
+header {
+    display: flex; /* Using Flexbox to easily align the logo and navigation */
+    justify-content: space-between; /* Ensures proper spacing between logo and navigation links */
+    align-items: center; /* Vertically aligns the logo and navigation items in the center */
+    background-color: #333; /* Dark background for strong contrast with white text */
+    padding: 15px 20px; /* Padding for balance inside the header */
+    position: relative; /* Setting up relative positioning for absolute elements like the logo */
+}
+/* Logo styling: This is where I made the logo text stand out */
+#logo {
+    font-family: "Freestyle Script", cursive; /* Freestyle Script for a personalized look */
+    font-size: 36px; /* Large font to make the logo prominent */
+    color: white; /* White text for contrast against the dark background */
+}
+/* Navigation bar styling: Centering the navigation items */
+header nav {
+    display: flex; /* Flexbox to align the navigation items horizontally */
+    flex-grow: 1; /* Makes the navigation grow to take up available space */
+    justify-content: center; /* Centers the navigation links */
+}
+/* Navigation list styling: Removing default list styling and aligning items */
+header ul {
+    list-style: none; /* No bullet points for the navigation list */
+    margin: 0; /* Removing default margin to tighten up the layout */
+    padding: 0; /* Removing default padding */
+    display: flex; /* Flexbox to display list items in a horizontal row */
+}
+/* Navigation list items: Spacing the links apart for clarity */
+header ul li {
+    margin-left: 20px; /* Adds 20px of space between each navigation link */
+}
+/* Navigation link styling: Defining how each link looks */
+header ul li a {
+    color: white; /* White text to match the dark background */
+    text-decoration: none; /* Removing the underline from the links for a clean look */
+    padding: 10px; /* Adding padding to make the links more clickable */
+}
+/* Welcome section heading (H1) styling */
+h1 {
+    font-size: 2.5em; /* Increase the font size for a bold, welcoming look */
+    font-weight: bold; /* Ensure the title is bold */
+    margin-bottom: 10px; /* Reduce bottom margin to bring the paragraph closer */
+    color: #333; /* Use a dark gray for a softer look than black */
+}
+/* Paragraph styling for the welcome text */
+p {
+    font-size: 1.1em; /* Increase the font size slightly for readability */
+    line-height: 1.6; /* Increase line height for better spacing between lines */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 800px; /* Limit the width of the paragraph to avoid it stretching too wide */
+    color: #555; /* Softer text color for readability and aesthetics */
+    padding: 10px 20px; /* Add padding for breathing space around the text */
+}
+/* Hero section styling: Centering the hero content */
+#hero {
+    text-align: center; /* Centers the content in the hero section */
+    background-color: #f4f4f4; /* Light grey background to match the rest of the page */
+    padding: 0px 0; /* Keeping padding minimal for a clean look */
+}
+/* Hero image styling: Making the hero image responsive */
+#hero img {
+    max-width: 90%; /* Making sure the hero image scales with the screen */
+    height: auto; /* Maintaining the image's aspect ratio */
+    border-radius: 10px; /* Adding subtle rounded corners for a polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a bit of depth */
+}
+/* General section styling: Adding padding and centering text */
+section {
+    padding: 50px; /* Gives breathing room around the section content */
+    text-align: center; /* Centers the text in each section */
+}
+/* Footer styling: Matching the header style */
+footer {
+    text-align: center; /* Centers the footer text */
+    background-color: #333; /* Dark background for visual consistency with the header */
+    color: white; /* White text for contrast and readability */
+    padding: 20px 0; /* Adds 20px top-bottom padding inside the footer */
+}
+/* Gallery styling: Using Flexbox for a responsive gallery layout */
+.gallery {
+    display: flex; /* Flexbox to arrange images in rows */
+    flex-wrap: wrap; /* Allows images to move to the next line if needed */
+    gap: 15px; /* Adds space between the images */
+    justify-content: center; /* Centers the gallery images */
+}
+/* Gallery image styling: Making sure each image is responsive */
+.gallery img {
+    width: 100%; /* Ensures the images take up the full width of their container */
+    max-width: 300px; /* Limits the maximum width to keep images consistent in size */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners for a professional look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+/* Testimonials section styling: Padding and background for distinction */
+#testimonials {
+    text-align: center; /* Centers the testimonials */
+    padding: 50px; /* Padding for spacing */
+    background-color: #f9f9f9; /* Light grey background to differentiate the section */
+}
+/* Testimonial container styling: Flexbox to arrange testimonials vertically */
+.testimonial-container {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stacks the testimonials vertically */
+    align-items: center; /* Centers the testimonials */
+    gap: 20px; /* Adds space between testimonials */
+}
+/* Individual testimonial styling: Box with padding, shadow, and border */
+.testimonial {
+    background-color: white; /* Clean white background for testimonials */
+    border: 1px solid #ddd; /* Light grey border to separate the testimonials from the background */
+    padding: 20px; /* Adds space inside the testimonial */
+    width: 80%; /* Makes the testimonial take up most of the width */
+    max-width: 600px; /* Limits the maximum width for readability */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border-radius: 8px; /* Rounded corners for a softer look */
+}
+/* Testimonial text styling: Italics for emphasis */
+.testimonial p {
+    font-style: italic; /* Italicized text for the testimonial content */
+    color: #333; /* Dark grey text for readability */
+}
+/* Testimonial author styling: Making the author stand out */
+.testimonial strong {
+    display: block; /* The author's name starts on a new line */
+    margin-top: 10px; /* Adds space above the author’s name */
+    font-weight: bold; /* Makes the author’s name bold */
+    color: #555; /* A lighter grey for the author’s name */
+}
+/* Responsive design for testimonials: Adjusting layout for larger screens */
+@media (min-width: 768px) {
+    .testimonial-container {
+        flex-direction: row; /* Displays testimonials in a row on larger screens */
+        flex-wrap: wrap; /* Allows testimonials to wrap to the next line if needed */
+        justify-content: center; /* Centers the testimonials */
+    }
+    .testimonial {
+        width: 45%; /* Testimonials take up 45% of the space on larger screens */
+        margin: 10px; /* Adds space between testimonials */
+    }
+}
+/* Service item image styling: Ensuring service images are responsive */
+.service-item img {
+    width: 100%; /* Ensures the image takes up the full width of its container */
+    max-width: 800px; /* Limits the width for consistency */
+    height: auto; /* Maintains the image’s aspect ratio */
+    border-radius: 8px; /* Rounded corners for a clean, polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a professional appearance */
+}
+/* Ensures the scrollbar is always visible to avoid layout shifts, the nav bar shifts on pages that require scrolling */
+html {
+    overflow-y: scroll; /* Forces the scrollbar to always be visible to prevent nav bar from moving*/
+}
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#lightbox.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+.ui-datepicker {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.ui-datepicker .ui-state-active {
+    background: #0066cc;
+    color: white;
+}
+
+#services-accordion h3 {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+
+#services-accordion div {
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+#services-accordion div img {
+    width: 100%; 
+    max-width: 1000px;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: 25px auto;
+    border-radius: 10px;
+}
+header label {
+    color: white; /* Change the label text color to white */
+    font-size: 14px; /* Optional: Adjust font size */
+    font-weight: normal; /* Optional: Keep font weight normal */
+    margin-right: 5px; /* Space between label and dropdown */
+}
