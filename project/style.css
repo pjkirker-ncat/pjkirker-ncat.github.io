@@ -11,7 +11,7 @@ header {
     justify-content: space-between; /* Ensures proper spacing between logo and navigation links */
     align-items: center; /* Vertically aligns the logo and navigation items in the center */
     background-color: #333; /* Dark background for strong contrast with white text */
-    padding: 10px 20px; /* Padding for balance inside the header */
+    padding: 15px 20px; /* Padding for balance inside the header */
     position: relative; /* Setting up relative positioning for absolute elements like the logo */
 }
 /* Logo styling: This is where I made the logo text stand out */
@@ -19,15 +19,10 @@ header {
     font-family: "Freestyle Script", cursive; /* Freestyle Script for a personalized look */
     font-size: 36px; /* Large font to make the logo prominent */
     color: white; /* White text for contrast against the dark background */
-    position: absolute; /* Keeping the logo in a fixed position */
-    left: 20px; /* Aligning the logo 20px from the left */
 }
 /* Navigation bar styling: Centering the navigation items */
 header nav {
-    margin: 0 auto; /* Ensuring the navigation is centered on the page */
     display: flex; /* Flexbox to align the navigation items horizontally */
-    width: 100%; /* Making the nav take up the full width */
-    padding-left: 0px; /* Making sure there's no extra padding on the left */
     flex-grow: 1; /* Makes the navigation grow to take up available space */
     justify-content: center; /* Centers the navigation links */
 }
@@ -163,3 +158,85 @@ footer {
 html {
     overflow-y: scroll; /* Forces the scrollbar to always be visible to prevent nav bar from moving*/
 }
+/*  Lightbox - This is a modal that pops up to show images (or other content) in a bigger view. 
+It’s hidden at first and only shows up when it gets the 'active' class. 
+The dark background helps focus on the content, and the image is centered and resized to fit on the screen. */
+#lightbox {            
+    position: fixed; /* Adjust the content to the screen*/
+    top: 0;          /* Top Alignment */  
+    left: 0;         /* Left Alignment */
+    width: 100%;      /* Width */
+    height: 100%;      /* Height Alignment*/
+    background: rgba(0, 0, 0, 0.8); /* Visual pleasing background*/
+    display: flex;     /* Flexbox is a tool to automatically adjust for different screen sizes for a responsive layout */
+    justify-content: center; /* Centers content of the page */
+    align-items: center;        /* Centers content of the page */
+    opacity: 0;                 /* Nine */
+    pointer-events: none;       /* Disabled */
+    transition: opacity 0.3s ease-in-out;    /* Fade-in transition */
+}
+/* Activates Lightbox */
+#lightbox.active {     
+    opacity: 1;         /* Allows lightbox to be visible */
+    pointer-events: all;   /* interaction */
+}
+/* Lightbox styling */
+#lightbox img {       
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+/* styling for datepicker */
+.ui-datepicker {              
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+ /* Styling for datepicker header*/
+.ui-datepicker .ui-datepicker-header {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+}
+/* Styling for datepicker is blue for active dates */
+.ui-datepicker .ui-state-active {
+    background: #0066cc;
+    color: white;
+}
+/* /* targets and styles  id="services-accordion, CSS sheet */
+#services-accordion h3 {
+    background: #333;   /* Dark backgroud */
+    color: white;
+    padding: 10px;  /* Inside the header padding */
+    margin: 0;      /* Removes margin */
+    border: 1px solid #ddd;    
+    cursor: pointer; /* Pointer cursor to show its clickable */
+}
+
+/* Accordion UI pattern used to display content in collapsible sections which allows users to control what is collapsed or expanded*/
+#services-accordion div {
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+#services-accordion div img {   /*the accordion is for up 100% of the width, with a maximum width of 1000px, and a fixed height of 600px*/
+    width: 100%; 
+    max-width: 1000px;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: 25px auto;
+    border-radius: 10px;
+}
+header label {
+    color: white; /* Change the label text color to white */
+    font-size: 14px; /* Optional: Adjust font size */
+    font-weight: normal; /* Optional: Keep font weight normal */
+    margin-right: 5px; /* Space between label and dropdown */

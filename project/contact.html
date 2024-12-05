@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8"> 
     <title>Kirker's Event Organizer - Contact</title> <!-- This is the title that shows up on the browser tab for this page, making it clear to users that this is the Contact section. -->
-    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to my main CSS file. This keeps the design consistent across the entire site and makes updates easier. -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to my main CSS file. This keeps the design consistent across the entire site and makes updates easier. --> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery Library -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script> <!-- jQuery UI Library -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> <!-- jQuery UI CSS -->
+    <script src="script.js"></script>
+
+
 </head>
 <body>
     <!-- Header section: Contains the logo and navigation links for easy access to other parts of the site -->
@@ -20,6 +26,13 @@
                 <li><a href="contact.html">Contact</a></li> <!-- This link leads to the contact page, making it easy for potential clients to get in touch with us. -->
             </ul>
         </nav>
+        <label for="language">Choose Language:</label>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+        </select>
     </header>
 
     <!-- Main content area: The core part of this page where users can fill out the contact form -->
@@ -41,7 +54,7 @@
 
                 <!-- Desired Event Date: This helps us check our availability -->
                 <label for="date">Desired Date:</label>
-                <input type="date" id="date" name="date" required> <!-- Capturing the preferred event date helps us plan ahead and ensures availability. -->
+                <input type="text" id="date" name="date" required> <!-- Capturing the preferred event date helps us plan ahead and ensures availability. -->
 
                 <!-- Dropdown menu for service selection: Helps us understand the user's needs right from the start -->
                 <label for="service">Service</label>

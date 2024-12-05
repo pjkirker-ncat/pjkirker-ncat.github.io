@@ -4,6 +4,10 @@
     <meta charset="UTF-8"> 
     <title>Kirker's Event Organizer - Testimonials</title> <!-- This title appears on the browser tab, letting users know they’re viewing the Testimonials page -->
     <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to my main CSS file. This keeps the design consistent across the entire site and makes updates easier. -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery Library -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script> <!-- jQuery UI Library -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> <!-- jQuery UI CSS -->
+    <script src="script.js"></script>
 </head>
 <body>
     <!-- Header section: Contains the logo and navigation bar for easy access to the different parts of the website -->
@@ -20,6 +24,13 @@
                 <li><a href="contact.html">Contact</a></li> <!-- This link leads to the contact page, making it easy for potential clients to get in touch with us. -->
             </ul>
         </nav>
+        <label for="language">Choose Language:</label>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+        </select>
     </header>
 
     <!-- Main content: Focuses on client testimonials to showcase our positive feedback -->

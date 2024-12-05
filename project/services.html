@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Kirker's Event Organizer - Services</title> <!-- Identifies this page as the Services page on the browser tab -->
     <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to my main CSS file. This keeps the design consistent across the entire site and makes updates easier. -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery Library -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script> <!-- jQuery UI Library -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> <!-- jQuery UI CSS -->
+    <script src="script.js"></script>
 </head>
 <body>
     <!-- Header section: Contains the logo and navigation bar for easy access to the different parts of the website -->
@@ -20,38 +24,39 @@
                 <li><a href="contact.html">Contact</a></li> <!-- This link leads to the contact page, making it easy for potential clients to get in touch with us. -->
             </ul>
         </nav>
+        <label for="language">Choose Language:</label>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+        </select>
     </header>
 
     <!-- Main content: Displays detailed information about the services we offer -->
     <main>
         <!-- Services section: Showcases each type of service we provide with a brief description and supporting image -->
         <section id="services">
-            <h1>Our Services</h1> <!-- The main heading for this section, welcoming users to explore our offerings -->
-
-            <!-- Service item: Wedding Planning -->
-            <div class="service-item">
-                <h2>Wedding Planning</h2> <!-- Subheading specifically for our wedding planning service -->
-                <p>We organize the wedding of your dreams with precision and care.</p> <!-- A short description to emphasize the attention we put into making weddings perfect -->
-                <img src="images/event1.jpg" alt="Event 1"> <!-- Image showing a wedding we planned to give visitors a visual example -->
-                <!-- Image sourced from https://www.eventplanner.net/how-to-organise-a-wedding.php -->
-            </div>
-
-            <!-- Service item: Corporate Events -->
-            <div class="service-item">
-                <h2>Corporate Events</h2> <!-- Subheading for corporate event services -->
-                <p>Professional corporate event planning with a focus on detail.</p> <!-- Emphasizes our experience and professionalism in handling business events -->
-                <img src="images/event2.jpg" alt="Event 2"> <!-- Visual example of a corporate event we've managed -->
-                <!-- Image sourced from https://saffronweddingstyle.com/services/corporate/ -->
-            </div>
-
-            <!-- Service item: Party Planning -->
-            <div class="service-item">
-                <h2>Party Planning</h2> <!-- Subheading for our party planning services -->
-                <p>We plan parties that your guests will never forget.</p> <!-- Highlights our ability to create memorable party experiences -->
-                <img src="images/event4.jpg" alt="Event 4"> <!-- Example image of a party event we've handled, adding visual proof of our work -->
-                <!-- Image sourced from https://www.khimcruz.com/maxines-inspired-by-oh-joy-1st-birthday/ -->
+            <h1>Our Services</h1>
+            <div id="services-accordion">
+                <h3>Wedding Planning</h3>
+                <div>
+                    <p>We organize the wedding of your dreams with precision and care. From intimate ceremonies to grand celebrations, our team ensures your day is unforgettable. Let us handle every detail, so you can focus on cherishing each moment with your loved ones.</p>
+                    <img src="images/event1.jpg" alt="Wedding Planning">
+                </div>
+                <h3>Corporate Events</h3>
+                <div>
+                    <p>Professional corporate event planning with a focus on detail. Whether it's a conference, team-building retreat, or product launch, we've got you covered. We ensure your business goals are met with seamless execution and professionalism.</p>
+                    <img src="images/event2.jpg" alt="Corporate Events">
+                </div>
+                <h3>Party Planning</h3>
+                <div>
+                    <p>We plan parties that your guests will never forget. From milestone birthdays to themed celebrations, we bring your vision to life. With creative designs and flawless coordination, your party will be the talk of the town!</p>
+                    <img src="images/event4.jpg" alt="Party Planning">
+                </div>
             </div>
         </section>
+
     </main>
 
     <!-- Footer section containing copyright and validation links -->
