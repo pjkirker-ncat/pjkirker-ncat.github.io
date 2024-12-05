@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Kirker's Event Organizer - Contact</title> <!-- This is the title that shows up on the browser tab for this page, making it clear to users that this is the Contact section. -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to my main CSS file. This keeps the design consistent across the entire site and makes updates easier. --> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery Library -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script> <!-- jQuery UI Library -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> <!-- jQuery UI CSS -->
+    <script src="script.js"></script>
+
+
+</head>
+<body>
+    <!-- Header section: Contains the logo and navigation links for easy access to other parts of the site -->
+    <header>
+        <div id="logo"> 
+            Kirker’s Event Organizer <!-- I decided to use a text-based logo for a clean and simple look, ensuring the branding remains visible on every page. -->
+        </div>
+        <nav>
+            <ul> <!-- The navigation bar is here to let users quickly jump to other important sections of the website. -->
+                <li><a href="index.html">Home</a></li> <!-- A link back to the homepage, where users can get an overview of our services and mission. -->
+                <li><a href="portfolio.html">Portfolio</a></li> <!-- Directs users to the portfolio page, where they can see examples of events we've successfully organized. -->
+                <li><a href="testimonials.html">Testimonials</a></li> <!-- Link to the testimonials page to showcase feedback from satisfied clients, which helps build trust. -->
+                <li><a href="services.html">Services</a></li> <!-- Takes users to the services page where they can see a detailed list of what we offer. -->
+                <li><a href="contact.html">Contact</a></li> <!-- This link leads to the contact page, making it easy for potential clients to get in touch with us. -->
+            </ul>
+        </nav>
+        <label for="language">Choose Language:</label>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+        </select>
+    </header>
+
+    <!-- Main content area: The core part of this page where users can fill out the contact form -->
+    <main>
+        <!-- Contact section: A simple form setup to gather user information and event details -->
+        <section id="contact">
+            <h1>Contact Us</h1> <!-- This heading makes it clear that this section is for getting in touch with us directly. -->
+            <p>Please fill out the below fields to contact us. We look forward to working with you!</p> <!-- Encouraging users to fill out the form with a friendly message. Helps create a welcoming vibe. -->
+            
+            <!-- Contact form: This form is designed to capture essential information we need from potential clients -->
+            <form id="contact-form">
+                <!-- User's Name: Required so we know who is reaching out to us -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required> <!-- Ensuring users provide their name to personalize our follow-up communication. -->
+                
+                <!-- User's Email: Required to ensure we have a way to respond to inquiries -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required> <!-- Email is essential for further communication, so it's marked as required. -->
+
+                <!-- Desired Event Date: This helps us check our availability -->
+                <label for="date">Desired Date:</label>
+                <input type="text" id="date" name="date" required> <!-- Capturing the preferred event date helps us plan ahead and ensures availability. -->
+
+                <!-- Dropdown menu for service selection: Helps us understand the user's needs right from the start -->
+                <label for="service">Service</label>
+                <select id="service" name="service" required> <!-- Dropdown makes it easy for users to select their event type, streamlining the process. -->
+                    <option value="" disabled selected>Select an option</option> <!-- Placeholder option that prompts users to make a choice. -->
+                    <option>Wedding</option> <!-- For clients looking to plan their wedding with us. -->
+                    <option>Corp Event</option> <!-- Option for corporate clients planning events like conferences or team-building sessions. -->
+                    <option>Birthday</option> <!-- For those seeking our help to plan a memorable birthday celebration. -->
+                    <option>Misc. Event</option> <!-- A catch-all option for other types of events not specifically listed. -->
+                </select>
+
+                <!-- Optional message field: Allows users to provide extra details about their event if they wish -->
+                <p>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea> <!-- This text area is optional, letting users include any additional details or questions they may have. -->
+                </p>
+
+                <!-- Submit button: Users click this to send their information to us -->
+                <button type="submit">Submit</button> <!-- Simple call-to-action button that submits the form. Starts our interaction with potential clients. -->
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer section containing copyright and validation links -->
+    <footer>
+        <p>&copy; 2024 Kirker's Event Organizer</p> <!-- Copyright notice for the website. -->
+        <a href="https://validator.w3.org/check?uri=referer" referrerpolicy="unsafe-url"> Validate HTML </a> <!-- A link to validate the HTML code, making sure it meets web standards. -->
+        <br>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url"> Validate CSS </a> <!-- A link to check the CSS for any errors or formatting issues. Important for maintaining best practices. -->
+    </footer>
+</body>
+</html>
